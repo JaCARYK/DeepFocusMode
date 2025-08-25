@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Focus Mode</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="header">
+      <img src="../../assets/icon-48.png" alt="Deep Focus Mode" class="logo">
+      <h1>Deep Focus Mode</h1>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggle-extension">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <!-- Status Section -->
+    <div class="status-section">
+      <h2>Current Status</h2>
+      <div id="status-content" class="status-content">
+        <div class="status-item">
+          <span class="status-label">Focus Mode:</span>
+          <span id="focus-status" class="status-value">Checking...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Active App:</span>
+          <span id="active-app" class="status-value">Unknown</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Session Time:</span>
+          <span id="session-time" class="status-value">--:--</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Stats Section -->
+    <div class="stats-section">
+      <h2>Today's Stats</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="focus-time">0</div>
+          <div class="stat-label">Minutes Focused</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="blocks-count">0</div>
+          <div class="stat-label">Distractions Blocked</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="productivity-score">0%</div>
+          <div class="stat-label">Productivity Score</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Quick Actions -->
+    <div class="actions-section">
+      <button id="start-focus" class="btn btn-primary">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        Start Focus Session
+      </button>
+      <button id="view-rules" class="btn btn-secondary">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+        </svg>
+        Manage Rules
+      </button>
+      <button id="open-options" class="btn btn-secondary">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+        </svg>
+        Settings
+      </button>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <a href="#" id="view-dashboard">View Dashboard</a>
+      <span class="separator">•</span>
+      <a href="#" id="help-link">Help</a>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

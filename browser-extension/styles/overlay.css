@@ -1,0 +1,290 @@
+/**
+ * Styles for content blocking overlay
+ */
+
+.dfm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dfm-overlay-content {
+  background: white;
+  border-radius: 20px;
+  padding: 48px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dfm-logo {
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 24px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.dfm-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dfm-message {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Countdown */
+.dfm-countdown {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.dfm-countdown-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+}
+
+.dfm-countdown-circle svg {
+  transform: rotate(-90deg);
+}
+
+.dfm-countdown-circle circle {
+  transition: stroke-dasharray 1s linear;
+}
+
+.dfm-countdown-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  font-family: 'Courier New', monospace;
+}
+
+.dfm-countdown p {
+  font-size: 16px;
+  color: #666;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Focus Time */
+.dfm-focus-time {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.dfm-progress-ring {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.dfm-progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dfm-focus-time p {
+  font-size: 16px;
+  color: #666;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Actions */
+.dfm-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.dfm-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dfm-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.dfm-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.dfm-btn-secondary {
+  background: transparent;
+  color: #666;
+  border: 2px solid #e0e0e0;
+}
+
+.dfm-btn-secondary:hover {
+  background: #f8f9fa;
+  border-color: #999;
+}
+
+/* Tips */
+.dfm-tips {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 32px;
+}
+
+.dfm-tips h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dfm-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dfm-tips li {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  padding-left: 24px;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dfm-tips li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .dfm-overlay-content {
+    padding: 32px 24px;
+    width: 95%;
+  }
+  
+  .dfm-title {
+    font-size: 24px;
+  }
+  
+  .dfm-message {
+    font-size: 16px;
+  }
+  
+  .dfm-actions {
+    flex-direction: column;
+  }
+  
+  .dfm-btn {
+    width: 100%;
+  }
+  
+  .dfm-countdown-circle {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .dfm-countdown-text {
+    font-size: 36px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .dfm-overlay-content {
+    background: #1e1e1e;
+  }
+  
+  .dfm-title {
+    color: #f0f0f0;
+  }
+  
+  .dfm-message {
+    color: #b0b0b0;
+  }
+  
+  .dfm-countdown-text {
+    color: #f0f0f0;
+  }
+  
+  .dfm-tips {
+    background: #2a2a2a;
+  }
+  
+  .dfm-tips h3 {
+    color: #f0f0f0;
+  }
+  
+  .dfm-tips li {
+    color: #b0b0b0;
+  }
+}
