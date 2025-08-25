@@ -1,4 +1,4 @@
-# 🎯 Deep Focus Mode - Intelligent Distraction Blocker
+# Deep Focus Mode - Intelligent Distraction Blocker
 
 **focus assistant for software engineers**
 
@@ -23,12 +23,7 @@ Deep Focus Mode is a cross-platform distraction blocker that goes beyond simple 
 - Distraction attempt tracking
 - Session history and patterns
 
-### Developer-Friendly
-- Clean, modular architecture
-- Comprehensive test coverage
-- RESTful API design
-- Extensible rule engine
-- Optional ML integration ready
+- TODO: ML integration
 
 ## Architecture
 
@@ -53,7 +48,7 @@ deep-focus-mode/
     └── manifest.json       # Extension manifest
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.10+
@@ -138,7 +133,7 @@ Options:
   --reset-db         Reset database (WARNING: deletes all data)
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 cd desktop-client
@@ -153,7 +148,7 @@ pytest --cov=src --cov-report=html
 pytest tests/test_rule_engine.py -v
 ```
 
-## 🔌 API Documentation
+## API Documentation
 
 The desktop client exposes a REST API for the browser extension:
 
@@ -215,14 +210,14 @@ Environment variables:
 - `DFM_LOG_LEVEL`: Logging level
 - `DFM_ENABLE_ML`: Enable ML features
 
-## 🔐 Privacy & Security
+## Privacy & Security
 
 - **No Keylogging**: Only tracks keystroke frequency, not actual keys
 - **Local Storage**: All data stored locally on your machine
 - **No Cloud Sync**: No external services or telemetry
 - **Open Source**: Full transparency of code behavior
 
-## 🚧 Roadmap
+## Roadmap
 
 ### Near Term
 - [ ] Dashboard web UI for statistics visualization
@@ -238,7 +233,7 @@ Environment variables:
 - [ ] Pomodoro timer integration
 - [ ] IDE plugins for deeper integration
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! This project follows Google's engineering standards:
 
@@ -256,22 +251,16 @@ Contributions are welcome! This project follows Google's engineering standards:
 - Comments: Clear, concise, and necessary
 - Tests: Maintain >80% coverage
 
-## 📝 License
+## License
 
 MIT License - see LICENSE file for details
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Built with:
 - [FastAPI](https://fastapi.tiangolo.com/) - Modern web framework
 - [SQLAlchemy](https://www.sqlalchemy.org/) - Database ORM
 - [psutil](https://github.com/giampaolo/psutil) - Process monitoring
 - [pynput](https://github.com/moses-palmer/pynput) - Input monitoring
-
-## 💬 Support
-
-- Issues: [GitHub Issues](https://github.com/yourusername/deep-focus-mode/issues)
-- Wiki: [Documentation](https://github.com/yourusername/deep-focus-mode/wiki)
-- Email: your.email@example.com
 
 ---
