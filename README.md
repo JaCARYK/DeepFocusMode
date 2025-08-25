@@ -1,36 +1,36 @@
 # 🎯 Deep Focus Mode - Intelligent Distraction Blocker
 
-**Production-grade focus assistant for software engineers**
+**focus assistant for software engineers**
 
 Deep Focus Mode is a cross-platform distraction blocker that goes beyond simple URL blocking. It intelligently detects when you're actively coding and responds to distractions with customizable rules including delayed access, conditional unlocking, and focus-time requirements.
 
-## ✨ Features
+## Features
 
-### 🧠 Smart Detection
+### Smart Detection
 - **Active Coding Detection**: Monitors IDE processes (VS Code, IntelliJ, PyCharm, etc.)
 - **Keystroke Activity Tracking**: Detects active work sessions (privacy-focused - no keylogging)
 - **Multi-Signal Analysis**: Combines process and activity data for accurate focus detection
 
-### 🚫 Intelligent Blocking
+### Intelligent Blocking
 - **Block Mode**: Complete blocking during focus sessions
 - **Delay Mode**: Time-delayed access with countdown
 - **Conditional Mode**: Unlock sites after X minutes of focused coding
 - **Priority-Based Rules**: Cascading rule evaluation system
 
-### 📊 Analytics & Insights
+### Analytics & Insights
 - Daily focus statistics
 - Productivity scoring
 - Distraction attempt tracking
 - Session history and patterns
 
-### 🔧 Developer-Friendly
+### Developer-Friendly
 - Clean, modular architecture
 - Comprehensive test coverage
 - RESTful API design
 - Extensible rule engine
 - Optional ML integration ready
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 deep-focus-mode/
@@ -275,5 +275,3 @@ Built with:
 - Email: your.email@example.com
 
 ---
-
-**Built for developers, by developers.** Stay focused, ship code. 🚀
